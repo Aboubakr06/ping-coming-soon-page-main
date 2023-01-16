@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
+:root {
+    --clr-primary-500: hsl(223, 87%, 63%);
+
+    --clr-Secondary-400: hsl(354, 100%, 66%);
+    --clr-Secondary-300: hsl(223, 100%, 88%);
+
+    --clr-neutral-600: hsl(209, 33%, 12%);
+    --clr-neutral-200: hsl(0, 0%, 59%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --ff-base: 'Libre Franklin', sans-serif;
+
+    --fw-bolder: 700;
+    --fw-bold: 600;
+    --fw-regular: 300;
+}
+
+/*
+  CSS RESET
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/***********
+   main Css
+************/
+body {
+    --sections-padding: 6rem 2rem;
+    --footer-padding: 0rem 2rem 2rem;
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-100);
+    
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: var(--sections-padding);
+}
+
+.container .title {
+    margin-top: 2rem;
+    font-weight: var(--fw-regular);
+    font-size: 1.4rem;
+}
+
+.title span {
+    color: var(--clr-neutral-600);
+    font-weight: var(--fw-bolder);
+}
+
+.container .prg {
+    font-size: 1rem;
+    color: var(--clr-neutral-600);
+    margin-bottom: 2rem;
+}
+
+.container .email {
+    display: grid;
+    margin-bottom: 4rem;
+}
+
+.error , .valid-msg{
+    place-self: start;
+    font-size: 0.75rem;
+    margin: 0.5rem 0.75rem;
+}
+
+.error {
+    display: none;
+    color: hsl(354, 100%, 66%);
+}
+
+.valid-msg {
+    display: none;
+    color: green;
+}
+
+.email__input, .button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.75em 2em;
+    border-radius: 2rem;
+}
+
+.email .email__input {
+    border: 2px solid var(--clr-Secondary-300);
+    outline: none;
+}
+
+.email .button {
+    cursor: pointer;
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-primary-500);
+    border: none;
+}
+
+.social-media a:hover ,.email .button:hover{
+    opacity: 0.5;
+}
+
+.footer {
+    display: grid;
+    padding: var(--footer-padding);
+}
+
+.footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-media a {
+    color: var(--clr-primary-500);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.footer p{
+    font-size: 1rem;
+}
+
+@media (min-width:47em) {
+    .container .title {
+        font-size: 3.5rem;
+    }
+
+    .container .prg {
+        font-size: 1.5rem;
+    }
+
+    .email {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "a a b"
+        "c . .";
+        min-width: 50%;
+    }
+
+    .email .email__input {
+        grid-area: a;
+    }
+
+    .email .button {
+        grid-area: b;
+    }
+
+    .container .img {
+        max-width: 50%;
+    }
+
+}
