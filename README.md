@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-6k6EqwD9NI)
 - Live Site URL: (https://friendly-beignet-5b4016.netlify.app/)
 
 ## My process
