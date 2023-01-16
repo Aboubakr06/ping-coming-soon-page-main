@@ -124,7 +124,7 @@ body {
 }
 
 .error , .valid-msg{
-    place-self: start;
+    place-self: center;
     font-size: 0.75rem;
     margin: 0.5rem 0.75rem;
 }
@@ -205,6 +205,12 @@ body {
 
     .email .email__input {
         grid-area: a;
+    }
+
+    .error , .valid-msg{
+        place-self: start;
+        font-size: 0.75rem;
+        margin: 0.5rem 0.75rem;
     }
 
     .email .button {
